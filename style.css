@@ -20,6 +20,14 @@ body {
   //box-shadow: 0 0 15px rgba(255, 20, 147, 0.7);
 }
 
+.logo {
+  padding: 2rem;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 }
 
 h1 {
