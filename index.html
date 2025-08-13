@@ -28,5 +28,20 @@
       <a href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank">Buy On Jupiter</a>
       <a href="https://www.orca.so/?tokenIn=So11111111111111111111111111111111111111112&tokenOut=CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank">Buy On Orca</a>
     </div>
+<div>
+        <h4>Love Mint Address</h4>
+        <p id="mint-id">EFQ7EEKvttR5UQxX9mccR5SJaDHBfaZ2MyKiKXzGPM1a</p>
+        <button id="copy" onclick="copyMint()">Copy Mint Address</button>
+      </section>
+
+      <script>
+        function copyMint() {
+          const mint = document.getElementById("mint-id").innerText;
+          navigator.clipboard.writeText(mint).then(() => {
+          //alert("Mint address copied!");
+        });
+      }
+      </script>
+</div>
 </body>
 </html>
