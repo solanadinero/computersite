@@ -95,6 +95,10 @@ h1 {
   background-color: #2c4f66;
 }
 
+.links { margin-top: 2rem; } 
+.links a { display: inline-block; margin: 0.5rem; padding: 0.75rem 1.5rem; background-color: #1f3b4b; color: #aefeff; text-decoration: none; border-radius: 6px; transition: background-color 0.3s ease; } 
+.links a:hover { background-color: #2c4f66; }
+
 /* Mint ID formatting */
 #mint-id {
   word-break: break-word;
