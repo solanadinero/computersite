@@ -56,3 +56,41 @@ about p {
 .links a:hover {
   background-color: #2c4f66;
 }
+
+#copy {
+  display: flex;
+  flex-wrap: wrap;
+  background: #ff1a75;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#mint-id {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  whitespace: normal;
+}
+
+#social {
+      background-color: #1a1a1a;
+      border: 1px solid #2c7a4b;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2rem;
+      box-shadow: 0 0 10px rgba(44, 122, 75, 0.3);
+    }
+
+    #social ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    #social a {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
