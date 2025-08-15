@@ -41,7 +41,7 @@ header h2 {
 
 #mint-id {
   font-size: 1rem;
-  color: #ffd700
+  color: #ffd700;
   word-break: break-word;
   overflow-wrap: break-word;
   white-space: normal;
@@ -133,6 +133,6 @@ header h2 {
 }
 
 .btn:hover {
-  background-color: #2c4f66;
+  background-color: #B59410;
 }
 
