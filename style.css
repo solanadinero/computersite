@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffd700;
-  color: #aefeff;
+  color: #00ffa3;
   min-height: 100vh;
 }
 
@@ -84,12 +84,12 @@ header h2 {
 }
 
 #social {
-  background-color: #1a1a1a;
-  border: 1px solid #2c7a4b;
+  background-color: #1c1c1c;
+  color: 00ffa3;
   border-radius: 12px;
   padding: 2rem;
   margin-top: 2rem;
-  box-shadow: 0 0 10px rgba(44, 122, 75, 0.3);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
 #social ul {
@@ -103,8 +103,12 @@ header h2 {
 #social a {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #aefeff;
+  color: #ffd700;
   text-decoration: none;
+}
+
+body div {
+  text-align: center;
 }
 
 .mint-again {
