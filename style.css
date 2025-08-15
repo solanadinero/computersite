@@ -5,42 +5,81 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0b1f2a;
+  background-color: #ffd700;
   color: #aefeff;
   min-height: 100vh;
 }
 
-.container {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
   border-radius: 50%;
   display: inline-block;
 }
 
-h1 {
-  font-size: 2.5rem;
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #1C1C1C; /* Deep Charcoal */
+  color: #FFD700; /* Iridescent Gold */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header h1 {
+  font-size: 3rem;
   margin-bottom: 0.5rem;
-  color: #aefeff;
+  color: #FFD700;
 }
 
-.tagline {
-  font-style: italic;
-  margin-bottom: 2rem;
-  color: #7fe0ff;
+header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #00FFA3; /* Aqua Blue */
 }
 
-.about p {
-  margin: 0.5rem 0;
+#mint-id {
   font-size: 1rem;
+  color: #9945FF; /* Solana Purple */
+   word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+#about {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #1C1C1C; /* Deep Charcoal */
+  color: #F5F5F5; /* Panda White */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); /* Gold glow */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #FFD700; /* Iridescent Gold */
+  text-align: center;
+}
+
+#about ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#about li {
+  margin-bottom: 0.75rem;
   line-height: 1.5;
+}
+
+#about p {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+  color: #00FFA3; /* Aqua Blue */
 }
 
 #social {
@@ -85,10 +124,3 @@ h1 {
   background-color: #2c4f66;
 }
 
-#mint-id {
-  word-break: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-  margin-top: 1rem;
-  font-size: 0.9rem;
-}
