@@ -1,3 +1,10 @@
+:root {
+  --gold: #ffd700;
+  --charcoal: #1c1c1c;
+  --turquoise: #00ffa3;
+  --purple: #9945ff;
+}
+
 body {
   margin: 0;
   padding: clamp(1rem, 5vw, 3rem);;
@@ -5,8 +12,8 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #ffd700;
-  color: #00ffa3;
+  background-color: var(--gold);
+  color: var(--turquoise);
   min-height: 100vh;
 }
 
@@ -21,70 +28,70 @@ body {
 header {
   text-align: center;
   padding: 2rem 1rem;
-  background-color: #1C1C1C; /* Deep Charcoal */
+  background-color: var(--charcoal); 
   border-radius: 12px;
-  color: #FFD700; /* Iridescent Gold */
+  color: var(--gold);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  color: #FFD700;
+  color: var(--gold);
 }
 
 header h2 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
-  color: #00FFA3; /* Aqua Blue */
+  color: var(--turquoise);
 }
 
 #mint-id {
   font-size: 1rem;
-  color: #ffd700;
+  color: var(--gold);
   word-break: break-word;
   overflow-wrap: break-word;
   white-space: normal;
 }
 
-#about {
+.mint-about {
   max-width: 700px;
   margin: 3rem auto;
   padding: 2rem;
-  background-color: #1C1C1C; /* Deep Charcoal */
-  color: #F5F5F5; /* Panda White */
+  background-color: var(--charcoal);
+  color: #F5F5F5; /* white */
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); /* Gold glow */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#about h2 {
+.mint-about h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #FFD700; /* Iridescent Gold */
+  color: var(--gold);
   text-align: center;
 }
 
-#about ul {
+.mint-about ul {
   list-style-type: disc;
   padding-left: 1.5rem;
   margin-bottom: 1rem;
 }
 
-#about li {
+.mint-about li {
   margin-bottom: 0.75rem;
   line-height: 1.5;
 }
 
-#about p {
+.mint-about p {
   font-size: 1rem;
   text-align: center;
   margin-top: 1rem;
-  color: #00FFA3; /* Aqua Blue */
+  color: var(--turquoise);
 }
 
 #social {
-  background-color: #1c1c1c;
+  background-color: var(--charcoal);
   color: 00ffa3;
   border-radius: 12px;
   padding: 2rem;
@@ -103,7 +110,7 @@ header h2 {
 #social a {
   font-weight: bold;
   font-size: 1.1rem;
-  color: #ffd700;
+  color: var(--gold);
   text-decoration: none;
 }
 
@@ -111,23 +118,12 @@ body div {
   text-align: center;
 }
 
-.mint-again {
-  max-width: 700px;
-  margin: 3rem auto;
-  padding: 2rem;
-  background-color: #1C1C1C; /* Deep Charcoal */
-  color: #ffd700; /* Panda White */
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); /* Gold glow */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 .btn {
   display: inline-block;
   margin: 0.5rem;
   padding: 0.75rem 1.5rem;
   background-color: #D4AF37;
-  color: #9945ff;
+  color: var(--purple);
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
@@ -140,3 +136,6 @@ body div {
   background-color: #B59410;
 }
 
+footer {
+  color: var(--purple);
+}
