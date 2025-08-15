@@ -92,6 +92,7 @@ header h2 {
 
 #social {
   background-color: var(--charcoal);
+  text-align: center;
   color: 00ffa3;
   border-radius: 12px;
   padding: 2rem;
@@ -100,7 +101,6 @@ header h2 {
 }
 
 #social ul {
-  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
