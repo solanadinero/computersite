@@ -11,8 +11,8 @@ body {
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
   border-radius: 50%;
   display: inline-block;
@@ -22,6 +22,7 @@ header {
   text-align: center;
   padding: 2rem 1rem;
   background-color: #1C1C1C; /* Deep Charcoal */
+  border-radius: 12px;
   color: #FFD700; /* Iridescent Gold */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -40,8 +41,8 @@ header h2 {
 
 #mint-id {
   font-size: 1rem;
-  color: #9945FF; /* Solana Purple */
-   word-break: break-word;
+  color: #ffd700
+  word-break: break-word;
   overflow-wrap: break-word;
   white-space: normal;
 }
@@ -106,12 +107,23 @@ header h2 {
   text-decoration: none;
 }
 
+.mint-again {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #1C1C1C; /* Deep Charcoal */
+  color: #ffd700; /* Panda White */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); /* Gold glow */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .btn {
   display: inline-block;
   margin: 0.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #1f3b4b;
-  color: #aefeff;
+  background-color: #D4AF37;
+  color: #9945ff;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
