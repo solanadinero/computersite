@@ -128,7 +128,7 @@ body div {
   height: 48px;  
   margin: 0.5rem;
   padding: 0 1rem; 
-  background-color: #D4AF37;
+  background-color: var(--gold);
   color: var(--purple);
   text-decoration: none;
   border: none;
@@ -141,7 +141,7 @@ body div {
 }
 
 .btn:hover {
-  background-color: var(--gold);
+  background-color: var(--turquoise);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
