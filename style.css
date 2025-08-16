@@ -103,7 +103,7 @@ header h2 {
 
 #social ul {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.75rem;
   padding: 0;
   list-style: none;
@@ -124,8 +124,8 @@ body div {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 200px; 
-  height: 48px;  
+  width: 160px; 
+  height: 40px;  
   margin: 0.5rem;
   padding: 0 1rem; 
   background-color: var(--gold);
@@ -147,11 +147,5 @@ body div {
 
 footer {
   color: var(--white);
-}
-
-@media (min-width: 600px) {
-  #socials ul {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
