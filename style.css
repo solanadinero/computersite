@@ -37,15 +37,47 @@ header {
 
 header h1 {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   color: var(--gold);
 }
 
 header h2 {
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   color: var(--turquoise);
 }
+
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.spin-token {
+  animation: spin 3s linear infinite;
+}
+
+.top-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.top-socials a {
+  color: var(--turquoise);
+  transition: color 0.3s ease;
+}
+
+.top-socials a:hover {
+  color: var(--gold);
+  animation: pulse 0.4s ease;
+}
+
 
 #mint-id {
   font-size: 1rem;
@@ -116,7 +148,7 @@ header h2 {
   text-decoration: none;
 }
 
-body div {
+.buybutts {
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -127,17 +159,17 @@ body div {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 160px; 
-  height: 55px;  
+  width: 120px; 
+  height: 60px;  
   margin: 0.5rem;
   padding: 0 1rem; 
   background-color: var(--gold);
   color: var(--purple);
   text-decoration: none;
   border: none;
-  border-radius: 6px;
+  border-radius: 20px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Modern depth */
