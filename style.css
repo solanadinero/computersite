@@ -58,7 +58,7 @@ header h2 {
 }
 
 .spin-token {
-  animation: spin 6s linear infinite;
+  animation: spin 7s linear infinite;
 }
 
 .top-socials {
@@ -146,9 +146,11 @@ header h2 {
   font-size: 1.1rem;
   color: var(--gold);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 #social a:hover {
+  color: var(--turquoise);
   animation: pulse 0.4s ease;
 }
 
@@ -189,5 +191,6 @@ header h2 {
 
 footer {
   color: var(--white);
+  text-align: center;
 }
 
