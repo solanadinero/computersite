@@ -80,6 +80,7 @@ header h2 {
 .top-socials a {
   color: var(--turquoise);
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .top-socials a:hover {
@@ -110,12 +111,11 @@ header h2 {
 
 .mint-about ul {
   list-style-type: none;
-  margin: 0 auto 1 auto;
-  max-width: 100%;
+  <!--max-width: 100%;-->
 }
 
 .mint-about li {
-  margin-bottom: 0.75rem;
+  margin: 0 auto 1 auto;
   line-height: 1.5;
 }
 
