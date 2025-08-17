@@ -113,16 +113,11 @@ header h2 {
 
 .mint-about ul {
   text-decoration: none;
-  margin: 0 auto;
+  margin: 1 auto;
   list-style: none;
   max-width: 100%;
   width: fit-content;
-  margin-bottom:: 1rem;
-}
-
-.mint-about li {
-  display: flex;
-  align-items: felx-start;
+  text-align: left;
 }
 
 .mint-about p {
