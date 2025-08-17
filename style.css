@@ -36,7 +36,9 @@ h2 {
 header {
   text-align: center;
   padding: 2rem 1rem;
+  max-width: 700px;
   background-color: var(--charcoal); 
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); /* Gold glow */
   border-radius: 12px;
   color: var(--gold);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -98,11 +100,10 @@ header h2 {
   max-width: 700px;
   margin: 2rem auto;
   padding: 1.5rem;
-  object-fit: contain;
   background-color: var(--charcoal);
   color: var(--white);
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); /* Gold glow */
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); /* Gold glow */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -126,12 +127,13 @@ header h2 {
 
 #social {
   background-color: var(--charcoal);
+  max-width: 700px;
   text-align: center;
-  color: 00ffa3;
+  color: #00ffa3;
   border-radius: 12px;
   padding: 2rem;
   margin-top: 2rem;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
 }
 
 #social ul {
