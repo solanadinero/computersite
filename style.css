@@ -117,8 +117,10 @@ header h2 {
 }
 
 body div {
-  text-align: center;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -126,7 +128,7 @@ body div {
   align-items: center;
   justify-content: center;
   width: 160px; 
-  height: 40px;  
+  height: 55px;  
   margin: 0.5rem;
   padding: 0 1rem; 
   background-color: var(--gold);
