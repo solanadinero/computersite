@@ -116,6 +116,13 @@ header h2 {
   margin: 0 auto;
   list-style: none;
   max-width: 100%;
+  width: fit-content;
+  margin-bottom:: 1rem;
+}
+
+.mint-about li {
+  display: flex;
+  align-items: felx-start;
 }
 
 .mint-about p {
