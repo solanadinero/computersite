@@ -89,8 +89,8 @@ header h2 {
 
 .mint-about {
   max-width: 700px;
-  margin: 3rem auto;
-  padding: 2rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
   background-color: var(--charcoal);
   color: var(--white);
   border-radius: 12px;
@@ -107,7 +107,7 @@ header h2 {
 
 .mint-about ul {
   list-style-type: disc;
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -149,19 +149,19 @@ header h2 {
 }
 
 .buybutts {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
 }
 
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 120px; 
+  width: 125px; 
   height: 60px;  
-  margin: 0.5rem;
   padding: 0 1rem; 
   background-color: var(--gold);
   color: var(--purple);
@@ -177,6 +177,7 @@ header h2 {
 
 .btn:hover {
   background-color: var(--turquoise);
+  animation: pulse 0.5s ease;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
