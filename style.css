@@ -18,6 +18,12 @@ body {
   min-height: 100vh;
 }
 
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--gold);
+}
+
 .logo {
   width: 250px;
   height: 250px;
@@ -42,7 +48,6 @@ header h1 {
 }
 
 header h2 {
-  font-size: 2rem;
   margin-bottom: 0;
   color: var(--turquoise);
 }
@@ -97,13 +102,6 @@ header h2 {
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.2); /* Gold glow */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.mint-about h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: var(--gold);
-  text-align: center;
 }
 
 .mint-about ul {
