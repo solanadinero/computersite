@@ -194,8 +194,8 @@ header h2 {
 }
 
 .bottom-img {
-  width: 450px;
-  height: 450px;
+  width: clamp(300px, 50vw, 500px);
+  height: auto;
   object-fit: cover;
   border-radius: 50%;
   display: inline-block;
