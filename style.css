@@ -118,6 +118,7 @@ header h2 {
 
 body div {
   text-align: center;
+  display: inline-block;
 }
 
 .btn {
