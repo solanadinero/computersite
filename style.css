@@ -120,6 +120,11 @@ header h2 {
   text-align: left;
 }
 
+.mint-about li {
+  flex-wrap: wrap;
+  margin: 1rem auto;
+}
+
 .mint-about p {
   font-size: 1rem;
   text-align: center;
