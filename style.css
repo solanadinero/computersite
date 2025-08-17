@@ -193,6 +193,14 @@ header h2 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
+.bottom-img {
+  width: 450px;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 footer {
   color: var(--white);
   text-align: center;
