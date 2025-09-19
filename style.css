@@ -202,6 +202,20 @@ header h2 {
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
+.jup {
+  background-color: #04ffb3; 
+  color: black;
+}
+
+.orca {
+  backgroud-color: #fedd00;
+  color: black;
+}
+
+.gecko {
+  background-color: #8f6dff;
+}
+
 .bottom-img {
   width: clamp(300px, 50vw, 500px);
   height: auto;
