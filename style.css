@@ -148,7 +148,7 @@ header h2 {
 }
 
 .card a:hover {
-  color: var(--turquoise);
+  color: var(--blue);
   animation: pulse 0.4s ease;
 }
 
@@ -172,7 +172,7 @@ header h2 {
   min-width: 125px;
   height: 60px;  
   padding: 0 1rem; 
-  background-color: var(--blue);
+  background-color: var(--turquise);
   color: var(--purple);
   text-decoration: none;
   border: none;
@@ -185,7 +185,7 @@ header h2 {
 }
 
 .btn:hover {
-  background-color: var(--turquoise);
+  background-color: var(--blue);
   animation: pulse 0.5s ease;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
