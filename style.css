@@ -87,7 +87,6 @@ header h2 {
   animation: pulse 0.4s ease;
 }
 
-
 #mint-id {
   font-size: 1rem;
   color: var(--gold);
@@ -96,7 +95,7 @@ header h2 {
   white-space: normal;
 }
 
-.mint-about {
+.card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,7 +110,7 @@ header h2 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.mint-about ul {
+.card ul {
   text-decoration: none;
   margin: 1 auto;
   list-style: none;
@@ -120,38 +119,19 @@ header h2 {
   text-align: left;
 }
 
-.mint-about li {
+.card li {
   flex-wrap: wrap;
   margin: 1rem auto;
 }
 
-.mint-about p {
+.card p {
   font-size: 1rem;
   text-align: center;
   margin-top: 1rem;
   color: var(--turquoise);
 }
 
-#social {
-  background-color: var(--charcoal);
-  max-width: 700px;
-  text-align: center;
-  color: #00ffa3;
-  border-radius: 12px;
-  padding: 2rem;
-  margin: 3rem auto;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-}
-
-#social ul {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.75rem;
-  padding: 0;
-  list-style: none;
-}
-
-#social a {
+.card a {
   font-weight: bold;
   font-size: 1.1rem;
   color: var(--gold);
@@ -159,7 +139,15 @@ header h2 {
   transition: color 0.3s ease;
 }
 
-#social a:hover {
+.social {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.card a:hover {
   color: var(--turquoise);
   animation: pulse 0.4s ease;
 }
