@@ -86,7 +86,8 @@ header h2 {
 }
 
 .top-socials a {
-  color: var(--turquoise);
+  color: var(--gecko);
+  text-size: larger;
 }
 
 .top-socials a:hover {
