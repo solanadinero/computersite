@@ -88,6 +88,27 @@
         alert("Mint address copied!");
       });
     }
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("slide-up");
+        observer.unobserve(entry.target); // Optional: stop observing once visible
+      }
+    });
+  }, {
+    threshold: 0.1 // Trigger when 10% of the card is visible
+  });
+
+  cards.forEach((card) => {
+    card.classList.add("hidden"); // Initial hidden state
+    observer.observe(card);
+  });
+});
+
     </script>
     <footer>
       &copy; 2025 Solana Dinero @solanadinero.  Not Legal Advice and no guarantee of profit. Here because we want to be, just like you 😊
