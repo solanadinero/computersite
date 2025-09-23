@@ -172,6 +172,10 @@ header h2 {
   color: var(--gold);
 }
 
+.social li a:hover {
+  color: var(--gecko);
+}
+
 .buybutts {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
