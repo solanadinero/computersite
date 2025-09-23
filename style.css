@@ -70,7 +70,7 @@ header h2 {
 }
 @keyframes pulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.15); }
+  50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
 
@@ -87,7 +87,7 @@ header h2 {
 
 .top-socials a {
   color: var(--gecko);
-  text-size: larger;
+  font-size: larger;
 }
 
 .top-socials a:hover {
