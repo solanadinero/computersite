@@ -137,7 +137,7 @@ header h2 {
 
 .card li {
   flex-wrap: wrap;
-  margin: 0.25rem 0;
+  margin: 0.5rem 0;
   color: var(--white);
 }
 
@@ -167,10 +167,6 @@ header h2 {
   gap: 1rem 2.5rem;
   margin: 0.5rem 0;
   padding: 0;
-}
-
-.social li {
-  margin 0.5rem 0;
 }
 
 .social li a {
