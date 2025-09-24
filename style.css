@@ -169,6 +169,10 @@ header h2 {
   padding: 0;
 }
 
+.social li {
+  margin 0.5rem 0;
+}
+
 .social li a {
   color: var(--gold);
 }
