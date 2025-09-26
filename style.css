@@ -52,8 +52,8 @@ header {
   border-radius: 12px;
   color: var(--gold);
   opacity: 0;
-  animation: fadein 1s forwards;
-  transform: translateY(-40px);
+  animation: fadein 1.5s forwards;
+  transform: translateY(-60px);
 }
 
 header h1 {
@@ -70,7 +70,7 @@ header h2 {
 @keyframes fadein {
   from {
     opacity: 0;
-    transform: translateY(-40px);
+    transform: translateY(-60px);
   }
   to {
     opacity: 1;
