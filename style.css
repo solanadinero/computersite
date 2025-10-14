@@ -8,6 +8,10 @@
   --jup: #04ffb3;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: clamp(1rem, 5vw, 3rem);
