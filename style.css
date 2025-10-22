@@ -261,7 +261,7 @@ header h2 {
   animation: pulse 1.2s ease infinite;
 }
 
-.wrap {
+.wrap ul li{
   word-break: break-word;
   overflow-wrap: break-word;
   white-space: normal;
