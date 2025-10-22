@@ -261,6 +261,12 @@ header h2 {
   animation: pulse 1.2s ease infinite;
 }
 
+.wrap {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
 .jup {
   background-color: var(--jup); 
 }
