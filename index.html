@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solana Dinero</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="icon" href="soldn.ico" type="image/png">
+  <link rel="icon" href="assets/soldn.ico" type="image/png">
 </head>
 <body>
   <header>
-    <img src="soldn.png" alt="Solana Dinero Logo" class="logo spin-token" />
+    <img src="assets/soldn.png" alt="Solana Dinero Logo" class="logo spin-token" />
     <h1>Solana Dinero</h1>
     <h2>SOLDN</h2>
     <p>A Simple Token<br><span style="font-size:smaller;">Since Aug 11, 2025</span></p>
@@ -24,7 +24,7 @@
 <section class="card">
   <h2>About Solana Dinero</h2>
   <p id="age" style="font-size:larger;"></p>
-  <a class="pdf" href="SolanaDineroWhitepage.pdf" download><i class="fa-solid fa-file-pdf"></i> Download Our Whitepages</a>
+  <a class="pdf" href="assets/SolanaDineroWhitepage.pdf" download><i class="fa-solid fa-file-pdf"></i> Download Our Whitepages</a>
   <p>Solana Dinero ($SOLDN) was created and launched Aug 11, 2025 on ORCA with just 0.045 Solana($7USD), but has grown since due to our <a href="#strategy">long term growth plan</a></p>
   <ul>
     <li>📈 <a href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank"><strong style="color:#8f6dff;">Friday Buy Day</strong></a> - Every Friday we Add to the Pool</li>
@@ -109,45 +109,10 @@
           <li>6FWX19WYMKtzv3q6AYqYZaC1RpxSKN2BhKBfVb8NyGgR-<strong>12.2B $SOLDN</strong></li><br>
         </ol>
       </div>
-        <img src="soldn.png" alt="Solana Dinero Logo" class="bottom-img" style="object-fit:cover;" />
+        <img src="assets/soldn.png" alt="Solana Dinero Logo" class="bottom-img" style="object-fit:cover;" />
   </div>
 
-  <script>
-const launchDate = new Date("2025-08-11");
-const currentDate = new Date();
-
-    const diffTime = currentDate - launchDate;
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-    document.getElementById("age").textContent = `We're ${diffDays} days old!`;
-    
-      function copyMint() {
-        const mint = document.getElementById("mint-id").innerText;
-        navigator.clipboard.writeText(mint).then(() => {
-        alert("Mint address copied!");
-      });
-    }
-
-  document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card");
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("slide-up");
-        observer.unobserve(entry.target); // Optional: stop observing once visible
-      }
-    });
-  }, {
-    threshold: 0.12 // Trigger when 10% of the card is visible
-  });
-
-  cards.forEach((card) => {
-    card.classList.add("hidden"); // Initial hidden state
-    observer.observe(card);
-  });
-});
-
-    </script>
+  <script src="assets/script.js"></script>
     <footer>
       &copy; 2025 Solana Dinero @solanadinero.  Not Legal Advice and no guarantee of profit. Here because we want to be, just like you 😊
     </footer>
