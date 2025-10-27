@@ -1,16 +1,27 @@
 const launchDate = new Date("2025-08-11");
 const currentDate = new Date();
 
-    const diffTime = currentDate - launchDate;
-    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-    document.getElementById("age").textContent = `We're ${diffDays} days old!`;
+const diffTime = currentDate - launchDate;
+const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+const buyDays = (diffDays - 34) / 7;
+document.getElementById("age").textContent = `We're ${diffDays} days old!`;
+document.getElementByI("fridays").textContent = `${buyDays}`;
     
-      function copyMint() {
-        const mint = document.getElementById("mint-id").innerText;
-        navigator.clipboard.writeText(mint).then(() => {
-        alert("Mint address copied!");
-      });
-    }
+function copyMint() {
+     const mint = document.getElementById("mint-id").innerText;
+     navigator.clipboard.writeText(mint).then(() => {
+     alert("Mint address copied!");
+  });
+ }
+
+fetch('/data/price.json')
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('liquidity').textContent = `Current Liquidity: $${Number(data.liquidity_usd).toLocaleString()}`;
+  })
+  .catch(err => {
+    console.error('Error loading price data:', err);
+  });
 
   document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
