@@ -5,7 +5,7 @@ const diffTime = currentDate - launchDate;
 const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 const buyDays = (diffDays - 34) / 7;
 document.getElementById("age").textContent = `We're ${diffDays} days old!`;
-document.getElementByI("fridays").textContent = `${buyDays}`;
+document.getElementById("fridays").textContent = `${buyDays}`;
     
 function copyMint() {
      const mint = document.getElementById("mint-id").innerText;
@@ -17,7 +17,7 @@ function copyMint() {
 fetch('../data/price.json')
   .then(res => res.json())
   .then(data => {
-    document.getElementById('liquidity').textContent = `Current Liquidity: $ ${Number(data.liquidity_usd).toLocaleString()}`;
+    document.getElementById("liquidity").textContent = `Current Liquidity: $ ${Number(data.liquidity_usd).toLocaleString()}`;
   })
   .catch(err => {
     console.error('Error loading price data:', err);
