@@ -3,7 +3,7 @@ const currentDate = new Date();
 
 const diffTime = currentDate - launchDate;
 const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-const buyDays = (diffDays - 34) / 7;
+const buyDays = Math.floor((diffDays - 32) / 7);
 document.getElementById("age").textContent = `We're ${diffDays} days old!`;
 document.getElementById("fridays").textContent = `${buyDays}`;
     
