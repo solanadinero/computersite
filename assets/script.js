@@ -14,7 +14,7 @@ function copyMint() {
   });
  }
 
-fetch('/data/price.json')
+fetch('../data/price.json')
   .then(res => res.json())
   .then(data => {
     document.getElementById('liquidity').textContent = `Current Liquidity: $${Number(data.liquidity_usd).toLocaleString()}`;
