@@ -21,7 +21,7 @@ async function fetchPrice() {
     if (!fs.existsSync(outputPath)) fs.mkdirSync(outputPath);
 
     fs.writeFileSync(
-      path.join(outputPath, 'data/price.json'),
+      path.join(outputPath, 'price.json'),
       JSON.stringify(priceData, null, 2)
     );
 
