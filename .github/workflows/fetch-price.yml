@@ -23,7 +23,7 @@ jobs:
 
       - name: Fetch GeckoTerminal pool data
         run: |
-          node fetch-price.js
+          node assets/fetch-price.js
 
       - name: Commit and push data
         run: |
