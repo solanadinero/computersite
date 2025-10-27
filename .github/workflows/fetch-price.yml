@@ -32,4 +32,5 @@ jobs:
           git config user.email "tidekeeper@dinero.com"
           git add assets/data/price.json
           git commit -m "Update price data [skip ci]" || echo "No changes to commit"
-          git push origin HEAD
+          git push https://x-access-token:${PAT_TOKEN}@github.com/solanadinero/computersite.git HEAD:main
+
