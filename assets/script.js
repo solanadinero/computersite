@@ -17,7 +17,7 @@ function copyMint() {
 fetch('../data/price.json')
   .then(res => res.json())
   .then(data => {
-    document.getElementById("liquidity").textContent = `Current Liquidity: $ ${Number(data.liquidity_usd).toLocaleString()}`;
+   const var liq = Math.round(Number(data.liquidity_usd) * 100) /100 document.getElementById("liquidity").textContent = `Current Liquidity: $ ${liq.toLocaleString()}`;
   })
   .catch(err => {
     console.error('Error loading price data:', err);
