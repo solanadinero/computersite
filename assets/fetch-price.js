@@ -17,7 +17,7 @@ async function fetchPrice() {
       price_change_24h: json.data.attributes.price_change_percentage.h24,
     };
 
-    const outputPath = path.join(__dirname, 'data');
+    const outputPath = path.join(__dirname, '..', 'data');
     if (!fs.existsSync(outputPath)) fs.mkdirSync(outputPath);
 
     fs.writeFileSync(
