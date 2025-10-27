@@ -35,4 +35,4 @@ jobs:
           git remote set-url origin https://x-access-token:${PAT_TOKEN}@github.com/solanadinero/computersite.git
           git add assets/data/price.json
           git commit -m "Update price data [skip ci]" || echo "No changes to commit"
-          git push
+          git push origin HEAD
