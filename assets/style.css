@@ -415,10 +415,10 @@ footer {
 @media (max-width: 850px) {
   .navbar {
     width: 100vw;
-    max-width: 100%;
     margin: 0;
   }
-  .navbar .parent {
-    padding: 0;
+  body {
+    padding: auto 0;
+    margin: auto 0;
 }
 }
