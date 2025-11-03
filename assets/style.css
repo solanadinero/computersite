@@ -417,8 +417,8 @@ footer {
     width: 100vw;
     margin: 0;
   }
-  body {
-    padding: auto 0;
-    margin: auto 0;
+  .left {
+left: 0;
+}
 }
 }
