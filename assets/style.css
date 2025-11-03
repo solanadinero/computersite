@@ -412,15 +412,9 @@ footer {
   display: block;
 }
 
-@media (max-width: 850px) {
-  .navbar {
-    width: 100vw;
-    margin: 0;
-    left:0;
-  }
-body {
-margin: auto 0;
-padding: auto 0;
+@media (max-width: 700px) {
+  .dropbtn {
+    padding: 10px;
 }
 }
 }
