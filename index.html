@@ -6,14 +6,22 @@
   <title>Solana Dinero</title>
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="icon" href="assets/soldn.ico" type="image/png">
+  <link rel="icon" href="assets/img/soldn.ico" type="image/png">
 </head>
 <body>
   <header>
-    <img src="assets/soldn.png" alt="Solana Dinero Logo" class="logo spin-token" />
+    <img src="assets/img/soldn.png" alt="Solana Dinero Logo" class="logo" />
     <h1>Solana Dinero</h1>
     <h2>$SOLDN</h2>
-    <p>A Simple Token<br><span style="font-size:smaller;">Since Aug 11, 2025</span></p>
+    <p class="larger">The Lazy Coin</p>
+    <p class="smaller">Since Aug 11, 2025</p>
+    <div class="copy-link-wrapper">
+      <button class="copy-link-button" onclick="copyMint()">
+        <p id="mint-id">CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP</p>
+        <i class="fas fa-copy"></i>
+      </button>
+    </div>
+
     <div class="top-socials">
       <a href="https://x.com/solanadinero" target="_blank"><strong>X</strong></a>
       <a href="https://discord.gg/Nkz3ApNG" target="_blank"><i class="fab fa-discord"></i></a>
@@ -21,103 +29,119 @@
     </div>
   </header>
 
+    <nav class="navbar">
+    <div class="dropbtn left">
+      <a href="https://store.solanadinero.com" target="_blank">
+        <i class="fa fa-cart-shopping"></i> <strong>Shop Merch</strong>
+      </a>
+    </div>
+    <div class="dropdown">
+      <div class="dropbtn"><strong>Buy $SOLDN </strong><img src="assets/img/soldn.ico" alt="SOLDN Icon" class="vm"></div>
+        <div class="dropdown-content">
+          <a href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank" class="jup round_top">
+            <strong>Jupiter </strong>
+            <img src="assets/img/jupiter_icon.ico" class="vm">
+          </a>
+          <a href="https://www.orca.so/?tokenIn=So11111111111111111111111111111111111111112&tokenOut=CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank" class="orca">
+            <strong>ORCA </strong> 
+            <img src="assets/img/orca_icon.png" class="vm">
+          </a>
+          <a href="https://phantom.com/tokens/solana/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank" class="phantom">
+            <strong>Phantom </strong>
+            <img src="assets/img/phantom_icon.png" class="vm">
+          </a>
+        </div>
+      </div>
+  </nav>
+
+
 <section class="card">
-  <h2>About Solana Dinero</h2>
-  <p id="age" style="font-size:larger;"></p>
-  <a class="pdf" href="assets/SolanaDineroWhitepage.pdf" download><i class="fa-solid fa-file-pdf"></i> Download Our Whitepages</a>
-  <p>Solana Dinero ($SOLDN) was created and launched Aug 11, 2025 on ORCA with just 0.045 Solana($7USD), but has grown since due to our <a href="#strategy">long term growth plan</a></p>
-  <p id="liquidity">Current Liquidity: 0.3 SOL</p>
-  <ul>
-    <li>📈 <a href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank"><strong style="color:#8f6dff;">Friday Buy Day</strong></a> - Every Friday we add to the pool</li>
-    <li>🛣 <strong>Re-Investment Strategy</strong> - Half of all buy fees get reinvested.</li>
-    <li>🚫 <strong>No Minting</strong> — 2 Trillion max supply</li>
-    <li>🌊 <strong>Half Liquidated</strong> - The majority of tokens always remain liquidated
-  </ul> 
-  <p>$SOLDN is designed for minimalism and virtually costless maintenance. This allows for a simple yet effective growth strategy, <a href="#strategy">details below.</a></p>
-  <p><a href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank" style="font-size: larger; text-decoration: underline; color: #febd14;"><strong>Friday Buy Day!&trade;</strong></a> 
-    Join us this Friday for our <span id="fridays">0</span>th consecutive week, and buy at least $1 worth of Solana Dinero $SOLDN!  <!--See the <a href="#leaders">Friday Buyday Top 3</a>--></p><br><br>
-  <a class="btn gecko" href="https://www.geckoterminal.com/solana/pools/CxwBwuE6dGKFti7AeLW8Dx7W4411t8moeCsTp4rbpmCP" target="_blank">Geckoterminal</a>
+  <h1>About Solana Dinero</h1>
+  <p>Launched against only 0.045 SOL, (~$7 USD), Solana Dinero $SOLDN is a test to <strong>Crypto Minimalism!</strong></p>
+  <div class="about-info">
+    <strong>Launch Date AUG-11-2025 : <span id="age"></span></strong>
+  </div>
+  <div class="about-info">
+    <strong><span id="liquidity">Current Liquidity : 0.2 SOL</span></strong>
+  </div>
+  <div class="about-info">
+    <strong>2 Trillion Supply : Non Mintable</strong>
+  </div>
+  <div class="about-info">
+    <strong><span id="price">Current Price: $.000000005</span></strong>
+  </div>
+  <div class="about-info">
+    <strong style="color:#febd14">Philosophy : Do Nothing except Re-Invest!</strong>
+  </div>
+  <p><strong>$SOLDN does nothing on purpose!</strong>  No effort means no costs, so we can maximize reinvesting profits and keep $SOLDN going forever!</p>
+  <p class="gp">Check out Solana Dinero $SOLDN on</p>
+  <a href="https://www.geckoterminal.com/solana/pools/CxwBwuE6dGKFti7AeLW8Dx7W4411t8moeCsTp4rbpmCP" target="_blank" class="btn gecko">Geckoterminal</a>
+  <p>
+    <a href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank" style="font-size: larger; text-decoration: underline;">
+      <strong>Friday Buy Day&trade;</strong></a> 
+    : Join us this Friday for the <span id="fridays">0</span>th consecutive week, and buy any amount of Solana Dinero $SOLND!</p>
 </section>
 
-<div class="card">
-  <h2>Join the Fun</h2><br>
-  <div class="buybutts">
-    <a class="btn jup" href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank">Buy On Jupiter</a>
-    <a class="btn" href="https://www.orca.so/?tokenIn=So11111111111111111111111111111111111111112&tokenOut=CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank">Buy On Orca</a>
-  </div>
-  <p id="mint-id">CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP</p>
-  <button class="btn" style="height:35px; background-color: #f5f5f5;" onclick="copyMint()">Copy Mint</button>
-  <p>Take part in <a href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank"><strong>Friday Buy Day&trade;</strong></a></p>
-</div>
-
 <section class="card" id="strategy">
-  <h2>Our Strategy</h2>
-  <p>Simply put, Solana Dinero ($SOLDN) charges a flat 1% fee on all buys, and uses over half of that fee to reinvest to the pool, raising it's price floor over time.</p>
-  <h3>Solana Dinero's Plan</h3>
-  <p>
-      Everything for Solana Dinero ($SOLDN) has been setup to maximize reinvesting by minimizing costs.  We reinvest the majority of our LP profits in order to raise the price floor over time.
-      This will consistently raise the minimum value that SOLDN can drop to, so over time, this will create growth (Although we can't guarantee everyone will profit).<br>
-      </p><br>
-  <p><strong>Friday Buy Day</strong>, starting Friday September 26, we buy at least $1 worth of Solana Dinero $SOLDN and we never sell</p>
-  <h3>Break Down</h3>
-    <ol>
-      <li>Charge 1% fee on buy transaction</li>
-      <li>Use most of that fee to reinvest</li>
-      <li>Do nothing else, incur no costs</li>
-    </ol>
+
+  <h2>SOLDN Strategy</h2>
+
+  <p>Regardless of application, any Crypto project's survival just depends on people buying it.<br><br>
+    Because of this, Solana Dinero ($SOLDN) is setup to minimize costs and future commitments.  Our annual costs are almost nothing, and we charge a flat 1% fee on all transactions.
+    This allows us to <strong>aggressively reinvest profits</strong> and maximize raising the price floor over time (Although we can't guarantee everyone will profit).<br>
+  </p><br>
+
+  <p><strong>Friday Buy Day</strong>: Since Sept 26, We put a buy order in every Friday!  This slowly compounds over time and keeps the ticker alive regardless of volume.</p>
+
   <p><strong>Work Smarter not Harder!</strong> We do nearly nothing, on purpose.  Money doesn't have to be complicated, and <strong>investments just need
   people buying them</strong>.  We have no staff, no overhead, no loans to repay, and no smart contracts to tie up funds, <strong>just growth!</strong></p><br>
   
-  <a class="btn gecko" href="https://www.geckoterminal.com/solana/pools/CxwBwuE6dGKFti7AeLW8Dx7W4411t8moeCsTp4rbpmCP" target="_blank">Geckoterminal</a>
+<p>For an in-dept breakdown, download our Whitepages</p>
+<a class="pdf" href="assets/SolanaDineroWhitepage.pdf" download style="color:#f5f5f5;"><i class="fa-solid fa-file-pdf"></i> Download Our Whitepages</a>
 
 </section>
 
   <section class="card">
-    <h2>Follow Us</h2><br>
-    <p>We're <strong>@solanadinero</strong> on everything. Email us at <strong style="color:#febd14;">hola@solanadinero.com</strong> for the best support.  Our most active socials are <strong>Reddit</strong> and <strong>X</strong>.</p>
-    <ul class="social">
-      <li><a href="https://twitter.com/solanadinero" target="_blank"><i class="fab fa-twitter"></i> <strong>X</strong></a></li>
-      <li><a href="https://www.reddit.com/r/solanadinero" target="_blank"><i class="fab fa-reddit"></i> SubReddit</a></li>
-      <li><a href="https://t.me/solanadinero" target="_blank"><i class="fab fa-telegram"></i> Telegram</a></li>
-      <li><a href="https://discord.gg/Nkz3ApNG" target="_blank"><i class="fab fa-discord"></i> Discord</a></li>
-      <li><a href="https://facebook.com/solanadinero" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-      <li><a href="https://linkedin.com/in/solanadinero" target="_blank"><i class="fab fa-linkedin"></i> Linkedin</a></li>
-      <li><a href="https://tiktok.com/@solanadinero" target="_blank"><i class="fab fa-tiktok"></i> Tiktok</a></li>
-      <li><a href="https://threads.com/@solanadinero" target="_blank"><i class="fab fa-threads"></i> Threads</a></li>
-    </ul>
-  <p>Follow along, drop us a message, or just creep on what we're up to<br>Join our community and help shape the future of Solana Dinero</p>
-  <br><p>Invest during the next <a href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank"><strong>Friday Buy Day&trade;</strong></a></p>  
+    <h2>Follow Us</h2>
+    <p>We're <strong>@solanadinero</strong> on everything. Email us at <strong class="gp">hola@solanadinero.com</strong></p>
+    <div class="social">
+      <a href="https://twitter.com/solanadinero" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.reddit.com/r/solanadinero" target="_blank"><i class="fab fa-reddit"></i></a>
+      <a href="https://t.me/solanadinero" target="_blank"><i class="fab fa-telegram"></i></a></li>
+      <a href="https://discord.gg/Nkz3ApNG" target="_blank"><i class="fab fa-discord"></i></a></li>
+      <a href="https://facebook.com/solanadinero" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://linkedin.com/in/solanadinero" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div><br>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfqmri-N_Ro-6ysu41c6HgredA8u_WVhUaynWs2PlD3f9IWxA/viewform?embedded=true" 
+      width="100%" height="450" frameborder="0" marginheight="0" marginwidth="0">Loading Email...</iframe>
+  <p>Join our community and help shape the future of Solana Dinero</p>
   </section>
-    
-    <div class="card">
-      <h2 style="margin-bottom:0.5rem;">Got Spare Change?</h2>
-      <p>Why not invest?</p><br>
-      <div class="buybutts">
-        <a class="btn jup forever" href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank">Buy On Jupiter</a>
-        <a class="btn" href="https://www.orca.so/?tokenIn=So11111111111111111111111111111111111111112&tokenOut=CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank">Buy On Orca</a>
-      </div>
-      <p id="mint-id">CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP</p>
-      <button class="btn" style="height:35px; background-color: #f5f5f5;" onclick="copyMint()">Copy Mint</button>
-      <br><p><a href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank"><strong>$$ Friday Buy Day&trade; $$</strong></a></p>
-    </div>
 
   <div class="card wrap" id="leaders">
-    <!-- potentially using this code for Friday Buy Day Leaderboard
-      <div>
-        <h2>Friday Leaders</h2>
-        <ol>
-          <li>Still Us-<strong>39.8B $SOLDN</strong></li><br>
-          <li>HonZ7jqZJ7LPKKiaaocnMohG3YRi4ieTwgSEZJJaotxC-<strong>32.5B $SOLDN</strong></li><br>
-          <li>6FWX19WYMKtzv3q6AYqYZaC1RpxSKN2BhKBfVb8NyGgR-<strong>12.2B $SOLDN</strong></li><br>
-        </ol>
-      </div>
-    -->
-        <img src="assets/soldn.png" alt="Solana Dinero Logo" class="bottom-img" style="object-fit:cover;" />
+    <h2>Got Spare Change?</h2>
+    <p>Why not invest?</p><br>
+    <img src="assets/img/soldn.png" alt="Solana Dinero Logo" class="bottom-img" style="object-fit:cover;" /><br>
+    <div class="buybutts">
+      <a class="btn jup forever" href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank">Buy On Jupiter</a>
+      <a class="btn" href="https://www.orca.so/?tokenIn=So11111111111111111111111111111111111111112&tokenOut=CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank">Buy On Orca</a>
+    </div>
+    <p id="mint-id">CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP</p>
+    <button class="btn" style="height:35px; background-color: #f5f5f5;" onclick="copyMint()">Copy Mint</button>
+    <br><p><a href="https://jup.ag/tokens/CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP" target="_blank"><strong>$$ Friday Buy Day&trade; $$</strong></a></p>
   </div>
 
   <script src="assets/script.js"></script>
     <footer>
-      &copy; 2025 Solana Dinero @solanadinero.  Not Legal Advice and no guarantee of profit. Here because we want to be, just like you 😊
+      <p>Email: hola@solanadinero.com</p>
+      <div class="social">
+        <a href="https://twitter.com/solanadinero" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.reddit.com/r/solanadinero" target="_blank"><i class="fab fa-reddit"></i></a>
+        <a href="https://t.me/solanadinero" target="_blank"><i class="fab fa-telegram"></i></a></li>
+        <a href="https://discord.gg/Nkz3ApNG" target="_blank"><i class="fab fa-discord"></i></a></li>
+        <a href="https://facebook.com/solanadinero" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://linkedin.com/in/solanadinero" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p>&copy; 2025 @solanadinero.  Not Legal Advice and no guarantee of profit. Here because we want to be, just like you 😊</p>
     </footer>
 </body>
 </html>
