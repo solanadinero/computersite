@@ -18,6 +18,7 @@ fetch('../data/price.json')
   .then(res => res.json())
   .then(data => {
  document.getElementById("liquidity").textContent = `Current Liquidity: $${Number(data.liquidity_usd).toFixed(2)} USD`;
+ document.getElementById("price").textContent = `Current Price: $${Number(data.price_usd).toString() USD`};
   })
   .catch(err => {
     console.error('Error loading price data:', err);
