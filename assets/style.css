@@ -411,3 +411,9 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+@media (max-width: 850px) {
+  .navbar {
+    width: 100%;
+  }
+}
