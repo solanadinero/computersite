@@ -388,7 +388,7 @@ footer {
 }
 @media (max-width: 900px) {
   .navbar {
-    margin-left: calc(-1*clamp(1rem, 5vw, 3rem));
+    margin-left: -5vw;
     width: 100vw;
   }
   .left {
