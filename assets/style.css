@@ -392,10 +392,10 @@ footer {
 
 @media (max-width: 900px) {
   .navbar {
-    margin-left: calc(-1*clamp(1rem, 5vh, 3rem));
-    width: 100vw;
+    margin: 0 calc(-1*clamp(1rem, 5vh, 3rem));
   }
   .dropbtn {
     width: 130px;
+    padding: 10px;
   }
 }
