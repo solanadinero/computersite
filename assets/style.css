@@ -25,12 +25,11 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--gold);
   transition: color 0.3s ease;
+  color: var(--gold);
 }
 a:hover {
-  transform: scale(1.05rem);
-  color: var(--gecko);
+  transform: scale(1.1rem);
 }
 
 h1, h2, h3 {
@@ -122,7 +121,6 @@ header {
   color: var(--turquoise);
   border: none;
   border-radius: 15px;
-  font-size: 14px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -135,25 +133,8 @@ header {
   font-size: 16px;
 }
 
-.top-socials {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
-}
-
-.top-socials a {
-  color: var(--gold);
-  font-size: larger;
-}
-
-.top-socials a:hover {
-  color: var(--gecko);
-  animation: pulse 0.6s ease infinite;
-}
-
 #mint-id {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   color: var(--turquoise);
   word-break: break-word;
   overflow-wrap: break-word;
@@ -229,7 +210,6 @@ header {
   background-color: #f57c00;
   color: var(--turquoise);
   text-decoration: none;
-  font-weight: bold;
   border-radius: 4px;
   border: 1px solid #e65100;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -242,8 +222,8 @@ header {
 
 .social {
   display: flex;
-  font-size: 1.2rem;
-  gap: 0.5rem;
+  font-size: larger;
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -253,16 +233,7 @@ header {
 
 .social a:hover {
   color: var(--gecko);
-}
-
-.buybutts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0;
-  max-width: 100%;
+  animation: pulse 0.6s ease infinite;
 }
 
 .btn {
@@ -344,7 +315,7 @@ footer {
   display: flex;
   align-items: center;
   border-radius: 12px;
-  max-width: 850px;
+  width: 850px;
   height: 80px;
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(255, 217, 0, 0.4);
@@ -373,8 +344,10 @@ footer {
   justify-content: center;
   vertical-align: middle;
   color: var(--gold);
-  height: 30px;
-  padding: 10px 25px;
+  height: 45px;
+  width: 150px;
+  padding: 10px 20px;
+  margin: 0 1rem;
   cursor: pointer;
   border: 1px solid var(--charcoal);
   font-size: 15px;
@@ -400,6 +373,7 @@ footer {
   height: 50px;
   width: 100%;
   justify-content: center;
+  color: var(--purple);
   gap: 0.5rem;
 }
 
@@ -411,9 +385,23 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-@media (max-width: 700px) {
-  .dropbtn {
-    padding: 10px;
+.bottom_wrapper {
+  position: relative;
+  display: flex;
 }
+
+@media (max-width: 900px) {
+  .navbar {
+    margin-left: calc(-1*clamp(1rem, 5vh, 3rem));
+    width: 100vw;
+  }
+  .dropbtn {
+    width: 130px;
+  }
+  .dropdown {
+    right: 0;
+  }
+  .left {
+    left: 0;
+  }
 }
