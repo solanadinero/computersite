@@ -134,7 +134,7 @@ header {
 }
 
 #mint-id {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: var(--turquoise);
   word-break: break-word;
   overflow-wrap: break-word;
@@ -385,14 +385,16 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-.bottom_wrapper {
-  position: relative;
-  display: flex;
-}
-
 @media (max-width: 900px) {
   .navbar {
-    margin: 0 calc(-1*clamp(1rem, 5vh, 3rem));
+    margin-left: calc(-1*clamp(1rem, 5vw, 3rem));
+    width: 100vw;
+  }
+  .left {
+    left: 0;
+  }
+  .dropdown {
+    right: 0;
   }
   .dropbtn {
     width: 130px;
