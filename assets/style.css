@@ -404,4 +404,8 @@ footer {
   .left {
     left: 0;
   }
+  .bottom_wrapper .dropbtn {
+    dropbtn:
+      width: 100px;
+  }
 }
