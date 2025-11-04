@@ -339,7 +339,7 @@ footer {
 .dropbtn {
   display: flex;
   background-color: rgba(63,31,20,0.5);
-  border-radius: 25px;
+  border-radius: 30px;
   align-items: center;
   justify-content: center;
   vertical-align: middle;
@@ -397,19 +397,5 @@ footer {
   }
   .dropbtn {
     width: 130px;
-  }
-  .dropdown {
-    right: 0;
-  }
-  .left {
-    left: 0;
-  }
-  .bottom_wrapper .dropbtn {
-    dropbtn{
-      height: 35px;
-      width: 80px;
-      padding: 10px;
-      margin: 0 0.5rem;
-    }
   }
 }
