@@ -364,6 +364,9 @@ footer {
   align-items: center;
   justify-content: center;
 }
+.nav-copy:hover {
+  background-color: var(--turquoise);
+}
 
 .round_top {
   border-top-left-radius: 25px;
