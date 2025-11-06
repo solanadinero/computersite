@@ -5,7 +5,7 @@ const diffTime = currentDate - launchDate;
 const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 const buyDays = Math.floor((diffDays - 32) / 7);
 document.getElementById("age").textContent = `We're ${diffDays} days old!`;
-//document.getElementById("fridays").textContent = `${buyDays}`;
+document.getElementById("fridays").textContent = `${buyDays}`;
     
 function copyMint() {
      const mint = document.getElementById("mint-id").innerText;
