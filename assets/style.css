@@ -263,8 +263,6 @@ header {
 
 .phantom {
   background-color: #88749E;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
 }
 .phantom:hover {
   background-color: #A090B1;
@@ -347,7 +345,7 @@ footer {
   z-index: 1001;
 }
 
-.dropdown-content a, .dropdown-content p{
+.dropdown-content a {
   display: inline-flex;
   align-items: center;
   height: 50px;
@@ -355,7 +353,16 @@ footer {
   justify-content: center;
   color: var(--purple);
   gap: 0.5rem;
+}
+.nav-copy {
+  height: 50px;
+  width: 100%;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  color: var(--turquiose);
   border: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .round_top {
