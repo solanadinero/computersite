@@ -347,7 +347,7 @@ footer {
   z-index: 1001;
 }
 
-.dropdown-content a {
+.dropdown-content a, .dropdown-content p{
   display: inline-flex;
   align-items: center;
   height: 50px;
@@ -355,6 +355,7 @@ footer {
   justify-content: center;
   color: var(--purple);
   gap: 0.5rem;
+  border: none;
 }
 
 .round_top {
