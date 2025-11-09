@@ -4,7 +4,7 @@ const currentDate = new Date();
 const diffTime = currentDate - launchDate;
 const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 const buyDays = Math.floor((diffDays - 32) / 7);
-document.getElementById("age").textContent = `We're ${diffDays} days old!`;
+//document.getElementById("age").textContent = `We're ${diffDays} days old!`;
 document.getElementById("fridays").textContent = `${buyDays}`;
     
 function copyMint() {
@@ -13,7 +13,7 @@ function copyMint() {
      alert("Mint address copied!");
   });
  }
-
+/*
 fetch('../data/price.json')
   .then(res => res.json())
   .then(data => {
@@ -23,6 +23,7 @@ fetch('../data/price.json')
   .catch(err => {
     console.error('Error loading price data:', err);
   });
+*/
 
   document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
