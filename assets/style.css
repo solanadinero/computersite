@@ -189,23 +189,6 @@ header {
   color: var(--gecko);
 }
 
-.about-info {
-  display: flex;
-  min-width: 70%;
-  padding: 15px 3rem;
-  border: 1px solid var(--gold);
-  background-color: var(--charcoal);
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  border-radius: 25px;
-  margin: .2rem;
-  transition: transform 0.3s ease-in-out;
-}
-.about-info:hover {
-  transform: scale(1.1);
-}
-
 .pdf {
   display: inline-block;
   padding: 10px 16px;
