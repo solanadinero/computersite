@@ -6,7 +6,7 @@
   --white: #150c25;
   --gecko: #8f6dff;
   --jup: #2e6f40;
-  --orca: #efbf04;
+  --orca: #908fe7;
 }
 
 html {
@@ -237,7 +237,7 @@ header {
   color: var(--charcoal);
 }
 .orca:hover {
-  background-color: #eed367;
+  background-color: #c4d0ff;
 }
 
 .gold {
