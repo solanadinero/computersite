@@ -80,22 +80,7 @@
     </div><br>
   <p>we're <strong>@solanadinero</strong> on all socials.  join our community!</p>
 
-    <script type="text/javascript" src="https://widgets.rubic.exchange/iframe/bundle.new-app.min.js"></script>
-<div id="rubic-widget-root"></div>
-<script defer type="text/javascript">
-  var configuration = {
-    fromChain: 'ETH',
-    toChain: 'SOL',
-    to: 'CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP',
-    amount: 1,
-    iframe: 'flex',
-    hideSelectionTo: true,
-    theme: 'dark',
-    injectTokens: {
-      sol: ['CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP']
-    }
-  };
-</script>
+  <div id="rubic-widget-root"></div>
   
   <img src="assets/img/soldn.png" alt="Solana Dinero Logo" class="bottom-img" style="margin-top: 2rem;" /><br>
 
@@ -140,6 +125,23 @@
       <p>&copy; 2025 @solanadinero.  Not Legal Advice and no guarantee of profit. merch is customizable and print on demand but All Sales are Final unless defective. solana dinero may end fire sale fridays at any time.</p>
     </footer>
 
+    <script type="text/javascript" src="https://widgets.rubic.exchange/iframe/bundle.new-app.min.js"></script>
+  <script defer type="text/javascript">
+      window.addEventListener('load', function () {
+        var configuration = {
+      fromChain: 'ETH',
+      toChain: 'SOL',
+      to: 'SOLDN_TOKEN_ADDRESS', // Replace with your actual token address
+      iframe: 'flex',
+      theme: 'dark',
+      hideSelectionTo: true,
+      injectTokens: {
+        sol: ['SOLDN_TOKEN_ADDRESS'] // Replace again here
+      }
+    };
+        window.RubicWidget.init(configuration);
+      });
+    </script>
     <script src="assets/script.js"></script>
   </body>
 </html>
