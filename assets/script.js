@@ -1,10 +1,10 @@
-const launchDate = new Date("2025-08-11");
+const launchDate = new Date("2025-11-10");
 const currentDate = new Date();
 
 const diffTime = currentDate - launchDate;
 const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-const buyDays = Math.floor((diffDays - 32) / 7);
-//document.getElementById("age").textContent = `We're ${diffDays} days old!`;
+const buyDays = Math.floor((diffDays) / 7);
+document.getElementById("age").textContent = `For ${diffDays} Days`;
 document.getElementById("fridays").textContent = `${buyDays}`;
     
 function copyMint() {
