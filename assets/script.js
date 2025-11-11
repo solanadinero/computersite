@@ -3,14 +3,14 @@ const currentDate = new Date();
 
 const diffTime = currentDate - launchDate;
 const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-const buyDays = Math.floor((diffDays) / 7);
-document.getElementById("age").textContent = `For ${diffDays} Days`;
+const buyDays = Math.floor((diffDays) / 7) + 1;
+document.getElementById("age").textContent = `for ${diffDays} days`;
 document.getElementById("fridays").textContent = `${buyDays}`;
     
 function copyMint() {
      const mint = document.getElementById("mint-id").innerText;
      navigator.clipboard.writeText(mint).then(() => {
-     alert("Mint address copied!");
+     alert("mint address copied!");
   });
  }
 /*
