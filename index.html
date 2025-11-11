@@ -130,18 +130,31 @@
     </footer>
 <script defer type="text/javascript">
   window.addEventListener('load', function () {
-    var configuration = {
-      fromChain: 'ETH', // default source chain (can be changed by user)
-      toChain: 'SOL',   // destination chain
-      to: 'CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP', // SOLDN token address
-      iframe: 'flex',
-      theme: 'dark',
-      hideSelectionTo: true, // locks destination chain
-      injectTokens: {
-        sol: ['CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP'] // ensures SOLDN is recognized
+    const tryInit = () => {
+      if (window.RubicWidget && typeof window.RubicWidget.init === 'function') {
+        window.RubicWidget.init({
+          fromChain: 'ETH',
+          toChain: 'SOL',
+          to: 'CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP',
+          iframe: 'flex',
+          theme: 'dark',
+          hideSelectionTo: true,
+          injectTokens: {
+            sol: ['CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP']
+          }
+        });
       }
     };
-    window.RubicWidget.init(configuration);
+
+    // Wait for RubicWidget to appear
+    const observer = new MutationObserver(() => {
+      if (window.RubicWidget) {
+        tryInit();
+        observer.disconnect();
+      }
+    });
+
+    observer.observe(document.body, { childList: true, subtree: true });
   });
 </script>
     <script src="assets/script.js"></script>
