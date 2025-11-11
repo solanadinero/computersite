@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solana Dinero</title>
-<script type="text/javascript" src="https://widgets.rubic.exchange/iframe/bundle.new-app.min.js"></script>
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="assets/img/soldn.ico" type="image/png">
@@ -86,8 +85,6 @@
   
   <img src="assets/img/soldn.png" alt="Solana Dinero Logo" class="bottom-img" style="margin-top: 2rem;" /><br>
 
- <div id="rubic-widget-root"></div>
-
     <div style="position: relative; display:flex; margin-bottom: 2rem;">
     <div class="dropbtn forever left" style="border: solid 1px #febd14;">
       <a href="https://store.solanadinero.com" target="_blank">
@@ -128,35 +125,6 @@
       </div>
       <p>&copy; 2025 @solanadinero.  Not Legal Advice and no guarantee of profit. merch is customizable and print on demand but All Sales are Final unless defective. solana dinero may end fire sale fridays at any time.</p>
     </footer>
-<script defer type="text/javascript">
-  window.addEventListener('load', function () {
-    const tryInit = () => {
-      if (window.RubicWidget && typeof window.RubicWidget.init === 'function') {
-        window.RubicWidget.init({
-          fromChain: 'ETH',
-          toChain: 'SOL',
-          to: 'CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP',
-          iframe: 'flex',
-          theme: 'dark',
-          hideSelectionTo: true,
-          injectTokens: {
-            sol: ['CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP']
-          }
-        });
-      }
-    };
-
-    // Wait for RubicWidget to appear
-    const observer = new MutationObserver(() => {
-      if (window.RubicWidget) {
-        tryInit();
-        observer.disconnect();
-      }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
-  });
-</script>
     <script src="assets/script.js"></script>
   </body>
 </html>
