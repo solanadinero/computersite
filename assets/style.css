@@ -260,14 +260,9 @@ header {
 .gecko {
   background-color: var(--gecko);
 }
-#rubic-widget-root {
-  margin-top: 2rem;
-  border-radius: 12px;
-  overflow: hidden;
-}
 
 .bottom-img {
-  width: clamp(300px, 50vw, 500px);
+  width: 200px;
   height: auto;
   object-fit: cover;
   border-radius: 50%;
