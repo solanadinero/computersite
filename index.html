@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="assets/img/soldn.ico" type="image/png">
+  <script src='https://plugin.jup.ag/plugin-v1.js'></script>
 </head>
 <body>
   
@@ -70,8 +71,9 @@
 </section>
 
   <section class="card">
-    <h2>join the fire</h2>
-    <p><a href="mailto:hola@solanadinero.com">email us at <strong> hola@solanadinero.com</strong></a> with any questions </p>
+    <h2>tickle the ticker</h2>
+    <div id="target-container" style="width: 400px; height: 568px;"></div>
+    <!--<p><a href="mailto:hola@solanadinero.com">email us at <strong> hola@solanadinero.com</strong></a> with any questions </p>
     <div class="social">
       <a href="https://twitter.com/solanadinero" target="_blank"><i class="fab fa-twitter"></i></a>
       <a href="https://www.reddit.com/r/solanadinero" target="_blank"><i class="fab fa-reddit"></i></a>
@@ -90,7 +92,7 @@
   width="100%"
   height="600px"
   frameborder="0"
-></iframe>-->
+></iframe>
 
     <div style="position: relative; display:flex; margin-bottom: 2rem;">
     <div class="dropbtn forever left" style="border: solid 1px #febd14;">
@@ -117,7 +119,8 @@
         </div>
       </div>
     </div>
-    <h2 style="margin: 4rem auto 2rem auto;">tickle the ticker</h2>
+    <h2 style="margin: 4rem auto 2rem auto;">tickle the ticker</h2>-->
+   <img src="assets/img/soldn.png" alt="Solana Dinero Logo" class="bottom-img" style="margin-top: 2rem;" />
   </section>
 
     <footer>
@@ -132,6 +135,23 @@
       </div>
       <p>&copy; 2025 @solanadinero.  Not Legal Advice and no guarantee of profit. merch is customizable and print on demand but All Sales are Final unless defective. solana dinero may end fire sale fridays at any time.</p>
     </footer>
+    <script>
+      window.Jupiter.init({
+  displayMode: "integrated",
+  integratedTargetId: "target-container",
+  formProps: {
+    initialAmount: "42069",
+    initialInputMint: "So11111111111111111111111111111111111111112",
+    initialOutputMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP",
+    fixedMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP",
+  },
+  branding: {
+    logoUri:
+      "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
+    name: "Solana Dinero",
+  },
+});
+    </script>
     <script src="assets/script.js"></script>
   </body>
 </html>
