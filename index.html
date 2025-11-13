@@ -96,22 +96,42 @@
       </div>
       <p>&copy; 2025 @solanadinero.  Not Legal Advice and no guarantee of profit. Our store is print on demand and all sales are final unless defective.</p>
     </footer>
-  <script>
-window.Jupiter.init({
-  displayMode: "integrated",
-  integratedTargetId: "target-container",
-  formProps: {
-    initialAmount: "4206900",
-    initialInputMint: "So11111111111111111111111111111111111111112",
-    initialOutputMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP",
-  },
-  branding: {
-    logoUri:
-      "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
-    name: "Solana Dinero",
-  },
-});
-  </script>
+<script>
+  // Function to initialize the main Jupiter Terminal
+  function initJupiterTerminal(wallet) {
+    window.Jupiter.init({
+      displayMode: "integrated",
+      integratedTargetId: "target-container",
+      
+      // CRITICAL: This hands control to the MWA logic (script 1)
+      passThroughWallet: wallet || undefined, 
+
+      formProps: {
+        initialAmount: "4206900",
+        initialInputMint: "So11111111111111111111111111111111111111112",
+        initialOutputMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP",
+      },
+      branding: {
+        logoUri: "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
+        name: "Solana Dinero",
+      },
+    });
+  }
+
+  // Wait for the page and scripts to load before calling the wallet kit function
+  document.addEventListener("DOMContentLoaded", function() {
+    try {
+      // This function is now available because the CDN script should be unblocked by Netlify
+      const walletKit = window.Jupiter.initWalletKit();
+      initJupiterTerminal(walletKit.wallet);
+      
+    } catch (e) {
+      console.error("Jupiter Wallet Kit initialization failed:", e);
+      // Fallback: Desktop wallets will still work
+      initJupiterTerminal(null); 
+    }
+  });
+</script>
     <script src="assets/script.js"></script>
   </body>
 </html>
