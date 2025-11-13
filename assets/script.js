@@ -13,18 +13,6 @@ function copyMint() {
      alert("mint address copied!");
   });
  }
-/*
-fetch('../data/price.json')
-  .then(res => res.json())
-  .then(data => {
- document.getElementById("liquidity").textContent = `Current Liquidity: $${Number(data.liquidity_usd).toFixed(2)} USD`;
- document.getElementById("price").textContent = `Current Price: $${Number(data.price_usd).toFixed(14)} USD`;
-  })
-  .catch(err => {
-    console.error('Error loading price data:', err);
-  });
-*/
-
   document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
 
@@ -36,7 +24,7 @@ fetch('../data/price.json')
       }
     });
   }, {
-    threshold: 0.12 // Trigger when 10% of the card is visible
+    threshold: 0.12 // Trigger when 12% of the card is visible
   });
 
   cards.forEach((card) => {
