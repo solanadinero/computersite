@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="assets/img/soldn.ico" type="image/png">
+  <script src="https://cdn.jsdelivr.net/npm/@jup-ag/wallet-adapter-mobile@latest/dist/umd/index.js"></script>
   <script src='https://plugin.jup.ag/plugin-v1.js'></script>
 </head>
 <body>
@@ -96,6 +97,11 @@
       <p>&copy; 2025 @solanadinero.  Not Legal Advice and no guarantee of profit. Our store is print on demand and all sales are final unless defective.</p>
     </footer>
     <script>
+
+    const walletKit = window.Jupiter.initWalletKit({
+    // You can customize the wallets shown, but the default list is usually best
+  });
+      
       window.Jupiter.init({
   displayMode: "integrated",
   integratedTargetId: "target-container",
