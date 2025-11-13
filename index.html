@@ -96,35 +96,63 @@
       </div>
       <p>&copy; 2025 @solanadinero.  Not Legal Advice and no guarantee of profit. Our store is print on demand and all sales are final unless defective.</p>
     </footer>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    try {
-      // This line is now safe because the Wallet Kit script has loaded.
-      const walletKit = window.Jupiter.initWalletKit();
-
-      window.Jupiter.init({
-        displayMode: "integrated",
-        integratedTargetId: "target-container",
-
-        // This tells Jupiter to use the wallet object we safely created.
-        passThroughWallet: walletKit.wallet, 
-
-        formProps: {
-          initialAmount: "42069",
-          initialInputMint: "So11111111111111111111111111111111111111112",
-          initialOutputMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP"
-        },
-        branding: {
-          logoUri:
-          "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
-          name: "Solana Dinero",
-        },
-      });
-    } catch (e) {
-      console.error("Jupiter initialization failed in DOMContentLoaded:", e);
-    }
+  <script>
+/*window.Jupiter.init({
+  displayMode: "integrated",
+  integratedTargetId: "target-container",
+  formProps: {
+    initialAmount: "4206900",
+    initialInputMint: "So11111111111111111111111111111111111111112",
+    initialOutputMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP",
+  },
+  branding: {
+    logoUri:
+      "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
+    name: "Solana Dinero",
+  },
+});*/
+    function initJupiterTerminal(wallet) {
+  window.Jupiter.init({
+    displayMode: "integrated",
+    integratedTargetId: "target-container",
+    // Pass the loaded wallet object ONLY if it's available
+    passThroughWallet: wallet || undefined, 
+    formProps: {
+      initialAmount: "4206900",
+      initialInputMint: "So11111111111111111111111111111111111111112",
+      initialOutputMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP",
+    },
+    branding: {
+      logoUri:
+        "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
+      name: "Solana Dinero",
+    },
   });
-</script>
+}
+    document.addEventListener("DOMContentLoaded", function() {
+  // Create a script tag for the Wallet Kit
+  const script = document.createElement('script');
+  script.src = "https://cdn.jsdelivr.net/npm/@jup-ag/wallet-adapter-mobile@latest/dist/umd/index.js";
+
+  script.onload = () => {
+    // Once the Wallet Kit is loaded, initialize it and pass the object to Jupiter
+    const walletKit = window.Jupiter.initWalletKit();
+    initJupiterTerminal(walletKit.wallet);
+  };
+
+  script.onerror = () => {
+    // If the Wallet Kit fails to load (e.g., blocked by CSP), still initialize Jupiter 
+    // in standalone mode (desktop will still work, mobile will fail as before).
+    initJupiterTerminal(null); 
+    console.warn("Mobile Wallet Kit failed to load. Mobile trading may not work.");
+  };
+
+  document.head.appendChild(script);
+});
+
+// Run the desktop-only version immediately as a fallback if the DOMContentLoaded fails
+initJupiterTerminal(null);
+  </script>
     <script src="assets/script.js"></script>
   </body>
 </html>
