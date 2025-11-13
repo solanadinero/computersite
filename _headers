@@ -1,0 +1,3 @@
+/*
+Access-Control-Allow-Origin: *
+Content-Security-Policy: default-src *; script-src * 'unsafe-inline' 'unsave-eval'; connect-src *; img-src * data:; style-src * 'unsafe-inline';
