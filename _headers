@@ -1,3 +1,5 @@
 /*
-Access-Control-Allow-Origin: *
-Content-Security-Policy: default-src *; script-src * 'unsafe-inline' 'unsave-eval'; connect-src *; img-src * data:; style-src * 'unsafe-inline';
+  Content-Security-Policy: default-src 'self' https://terminal.jup.ag/ https://*.solana.com; \
+  script-src 'self' https://terminal.jup.ag/ https://cdn.jsdelivr.net/ 'unsafe-eval' 'unsafe-inline'; \
+  connect-src 'self' https://terminal.jup.ag/ https://*.solana.com wss://api.mainnet-beta.solana.com; \
+  img-src 'self' data: https:;
