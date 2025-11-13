@@ -96,24 +96,39 @@
       </div>
       <p>&copy; 2025 @solanadinero.  Not Legal Advice and no guarantee of profit. Our store is print on demand and all sales are final unless defective.</p>
     </footer>
-    <script>
-const walletKit = window.Jupiter.initWalletKit();
+<script>
+  // Use a small delay to ensure all Jupiter functions are loaded
+  setTimeout(() => {
+    try {
+      // Initialize the Wallet Kit after the Jupiter Terminal is fully loaded
+      const walletKit = window.Jupiter.initWalletKit();
+      
+      // Initialize the Jupiter Terminal, forcing it to use the new wallet object
       window.Jupiter.init({
-  displayMode: "integrated",
-  integratedTargetId: "target-container",
-  formProps: {
-    initialAmount: "42069",
-    initialInputMint: "So11111111111111111111111111111111111111112",
-    initialOutputMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP"
-    //fixedMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP",
-  },
-  branding: {
-    logoUri:
-      "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.ico",
-    name: "Solana Dinero",
-  },
-});
-    </script>
+        displayMode: "integrated",
+        integratedTargetId: "target-container",
+        
+        // CRITICAL: Pass the actual wallet object for mobile connectivity
+        passThroughWallet: walletKit.wallet, 
+
+        formProps: {
+          initialAmount: "42069",
+          initialInputMint: "So11111111111111111111111111111111111111112",
+          initialOutputMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP"
+        },
+        branding: {
+          logoUri:
+          "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
+          name: "Solana Dinero",
+        },
+      });
+
+    } catch (e) {
+      console.error("Jupiter initialization failed:", e);
+      // Optional: Add a fallback message here if the widget still fails to appear
+    }
+  }, 500); // 500ms delay is usually safe for CDN scripts
+</script>
     <script src="assets/script.js"></script>
   </body>
 </html>
