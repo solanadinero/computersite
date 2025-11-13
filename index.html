@@ -97,7 +97,7 @@
       <p>&copy; 2025 @solanadinero.  Not Legal Advice and no guarantee of profit. Our store is print on demand and all sales are final unless defective.</p>
     </footer>
   <script>
-/*window.Jupiter.init({
+window.Jupiter.init({
   displayMode: "integrated",
   integratedTargetId: "target-container",
   formProps: {
@@ -110,48 +110,7 @@
       "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
     name: "Solana Dinero",
   },
-});*/
-    function initJupiterTerminal(wallet) {
-  window.Jupiter.init({
-    displayMode: "integrated",
-    integratedTargetId: "target-container",
-    // Pass the loaded wallet object ONLY if it's available
-    passThroughWallet: wallet || undefined, 
-    formProps: {
-      initialAmount: "4206900",
-      initialInputMint: "So11111111111111111111111111111111111111112",
-      initialOutputMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP",
-    },
-    branding: {
-      logoUri:
-        "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
-      name: "Solana Dinero",
-    },
-  });
-}
-    document.addEventListener("DOMContentLoaded", function() {
-  // Create a script tag for the Wallet Kit
-  const script = document.createElement('script');
-  script.src = "https://cdn.jsdelivr.net/npm/@jup-ag/wallet-adapter-mobile@latest/dist/umd/index.js";
-
-  script.onload = () => {
-    // Once the Wallet Kit is loaded, initialize it and pass the object to Jupiter
-    const walletKit = window.Jupiter.initWalletKit();
-    initJupiterTerminal(walletKit.wallet);
-  };
-
-  script.onerror = () => {
-    // If the Wallet Kit fails to load (e.g., blocked by CSP), still initialize Jupiter 
-    // in standalone mode (desktop will still work, mobile will fail as before).
-    initJupiterTerminal(null); 
-    console.warn("Mobile Wallet Kit failed to load. Mobile trading may not work.");
-  };
-
-  document.head.appendChild(script);
 });
-
-// Run the desktop-only version immediately as a fallback if the DOMContentLoaded fails
-initJupiterTerminal(null);
   </script>
     <script src="assets/script.js"></script>
   </body>
