@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" href="assets/img/soldn.ico" type="image/png">
-  <script src="https://cdn.jsdelivr.net/npm/@jup-ag/wallet-adapter-mobile@latest/dist/umd/index.js"></script>
 <script src='https://plugin.jup.ag/plugin-v1.js'></script>
 </head>
 <body>
@@ -96,40 +95,22 @@
       </div>
       <p>&copy; 2025 @solanadinero.  Not Legal Advice and no guarantee of profit. Our store is print on demand and all sales are final unless defective.</p>
     </footer>
+<script src="https://terminal.jup.ag/main-v2.js" data-preload></script>
+
 <script>
-  // Function to initialize the main Jupiter Terminal
-  function initJupiterTerminal(wallet) {
-    window.Jupiter.init({
-      displayMode: "integrated",
-      integratedTargetId: "target-container",
-      
-      // CRITICAL: This hands control to the MWA logic (script 1)
-      passThroughWallet: wallet || undefined, 
+  window.Jupiter.init({
+    displayMode: "integrated",
+    integratedTargetId: "target-container",
 
-      formProps: {
-        initialAmount: "4206900",
-        initialInputMint: "So11111111111111111111111111111111111111112",
-        initialOutputMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP",
-      },
-      branding: {
-        logoUri: "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
-        name: "Solana Dinero",
-      },
-    });
-  }
-
-  // Wait for the page and scripts to load before calling the wallet kit function
-  document.addEventListener("DOMContentLoaded", function() {
-    try {
-      // This function is now available because the CDN script should be unblocked by Netlify
-      const walletKit = window.Jupiter.initWalletKit();
-      initJupiterTerminal(walletKit.wallet);
-      
-    } catch (e) {
-      console.error("Jupiter Wallet Kit initialization failed:", e);
-      // Fallback: Desktop wallets will still work
-      initJupiterTerminal(null); 
-    }
+    formProps: {
+      initialAmount: "4206900",
+      initialInputMint: "So11111111111111111111111111111111111111112",
+      initialOutputMint: "CNgouAHnb7iuY3LC2DGtkpPobVSeKYbhcSNaSCv5ShmP"
+    },
+    branding: {
+      logoUri: "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
+      name: "Solana Dinero",
+    },
   });
 </script>
     <script src="assets/script.js"></script>
