@@ -98,15 +98,11 @@
     </footer>
     <script>
 
-    const walletKit = window.Jupiter.initWalletKit({
-    // You can customize the wallets shown, but the default list is usually best
-  });
-      
       window.Jupiter.init({
   displayMode: "integrated",
   integratedTargetId: "target-container",
   //mobile
-  passThroughWallet: walletKit.wallet,
+  enableWalletPassthrough: true,
   formProps: {
     initialAmount: "42069",
     initialInputMint: "So11111111111111111111111111111111111111112",
@@ -115,7 +111,7 @@
   },
   branding: {
     logoUri:
-      "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.png",
+      "https://raw.githubusercontent.com/solanadinero/computersite/main/assets/img/soldn.ico",
     name: "Solana Dinero",
   },
 });
