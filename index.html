@@ -97,18 +97,16 @@
       <p>&copy; 2025 @solanadinero.  Not Legal Advice and no guarantee of profit. Our store is print on demand and all sales are final unless defective.</p>
     </footer>
 <script>
-  // Use a small delay to ensure all Jupiter functions are loaded
-  setTimeout(() => {
+  document.addEventListener("DOMContentLoaded", function() {
     try {
-      // Initialize the Wallet Kit after the Jupiter Terminal is fully loaded
+      // This line is now safe because the Wallet Kit script has loaded.
       const walletKit = window.Jupiter.initWalletKit();
-      
-      // Initialize the Jupiter Terminal, forcing it to use the new wallet object
+
       window.Jupiter.init({
         displayMode: "integrated",
         integratedTargetId: "target-container",
-        
-        // CRITICAL: Pass the actual wallet object for mobile connectivity
+
+        // This tells Jupiter to use the wallet object we safely created.
         passThroughWallet: walletKit.wallet, 
 
         formProps: {
@@ -122,12 +120,10 @@
           name: "Solana Dinero",
         },
       });
-
     } catch (e) {
-      console.error("Jupiter initialization failed:", e);
-      // Optional: Add a fallback message here if the widget still fails to appear
+      console.error("Jupiter initialization failed in DOMContentLoaded:", e);
     }
-  }, 500); // 500ms delay is usually safe for CDN scripts
+  });
 </script>
     <script src="assets/script.js"></script>
   </body>
