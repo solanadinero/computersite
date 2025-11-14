@@ -376,9 +376,9 @@ footer {
 #productCarousel {
     /* Set a specific width for the carousel, or inherit from a parent container. */
     /* This example sets it to fill its parent (.card) up to 400px wide. */
+    height: 400px; 
     max-width: 400px; 
-    margin-left: auto; /* Center it within the parent .card */
-    margin-right: auto;
+    margin: 0 auto;
     
     /* You must define a height if the image's height isn't defining it! */
     /* If images are different aspect ratios, set a max-height: */
@@ -401,8 +401,8 @@ footer {
     height: auto;
     
     /* Optional: If images are different aspect ratios, use object-fit */
-    /* object-fit: cover; 
-    object-position: center; */
+    object-fit: contain; 
+    object-position: center; 
 }
 
 /* Make sure the carousel inner div also supports the sizing */
