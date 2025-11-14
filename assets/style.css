@@ -369,6 +369,55 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+/* --- Custom Carousel CSS --- */
+
+/* 1. Container for the carousel */
+#productCarousel {
+    position: relative;
+    overflow: hidden; /* Hides items that are not active */
+}
+
+/* 2. All carousel items are absolutely positioned and hidden by default */
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+}
+
+/* 3. Only the 'active' item is visible */
+.carousel-item.active {
+    position: relative; /* Use relative to take up space in the layout */
+    opacity: 1;
+}
+
+/* 4. Basic styling for the navigation buttons (replace with your preference) */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
 @media (max-width: 900px) {
   .navbar {
     margin-left: -5vw;
