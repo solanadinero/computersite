@@ -97,6 +97,8 @@
     </footer>
 
 <script>
+  window.solana.connect({ onlyIfTrusted: true }).then(() => {
+  // Load Jupiter widget here
   window.Jupiter.init({
     displayMode: "integrated",
     integratedTargetId: "target-container",
@@ -111,6 +113,7 @@
       name: "Solana Dinero",
     },
   });
+    });
 </script>
     <script src="assets/script.js"></script>
   </body>
