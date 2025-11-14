@@ -383,7 +383,8 @@ footer {
     /* You must define a height if the image's height isn't defining it! */
     /* If images are different aspect ratios, set a max-height: */
     max-height: 500px;
-    
+
+    display: block;
     position: relative;
     overflow: hidden; 
 }
