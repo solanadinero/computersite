@@ -37,4 +37,54 @@ function copyMint() {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('productCarousel');
+    if (!carousel) return;
+
+    // Get all items and the controls
+    const items = carousel.querySelectorAll('.carousel-inner .carousel-item');
+    const prevButton = carousel.querySelector('.carousel-control-prev');
+    const nextButton = carousel.querySelector('.carousel-control-next');
+    let currentIndex = 0;
+
+    // Function to update the active item
+    function updateCarousel(newIndex) {
+        // Remove 'active' class from current item
+        items[currentIndex].classList.remove('active');
+
+        // Calculate the new index, ensuring it wraps around
+        if (newIndex >= items.length) {
+            currentIndex = 0;
+        } else if (newIndex < 0) {
+            currentIndex = items.length - 1;
+        } else {
+            currentIndex = newIndex;
+        }
+
+        // Add 'active' class to the new item
+        items[currentIndex].classList.add('active');
+    }
+
+    // Set the initial active item (in case the HTML is missing it)
+    if (items.length > 0) {
+        // Ensure only one item is active on load
+        items.forEach(item => item.classList.remove('active'));
+        items[0].classList.add('active');
+    }
+
+
+    // Add event listeners to buttons
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            updateCarousel(currentIndex - 1);
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            updateCarousel(currentIndex + 1);
+        });
+    }
+});
+
     
