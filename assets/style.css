@@ -211,7 +211,7 @@ header {
   background-color: #ef6c00;
 }
 
-.mobile-hidden {
+#mobile-hidden {
   opacity: 0;
 }
 
