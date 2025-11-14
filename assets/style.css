@@ -384,7 +384,7 @@ footer {
     /* If images are different aspect ratios, set a max-height: */
     max-height: 500px;
 
-    display: block;
+    display: block !important;
     position: relative;
     overflow: hidden; 
 }
