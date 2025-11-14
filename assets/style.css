@@ -291,7 +291,7 @@ footer {
   margin: 0 auto;
   box-shadow: 0 0 20px rgba(255, 217, 0, 0.4);
   z-index: 1000;
-  opacity: 0;
+  /*opacity: 0;*/
   animation: fadein 1s forwards;
   transform: translateY(50px);
 }
