@@ -372,10 +372,44 @@ footer {
 
 /* --- Custom Carousel CSS --- */
 
-/* 1. Container for the carousel */
+/* 1. Size the entire carousel container (ID of the top-level div) */
 #productCarousel {
+    /* Set a specific width for the carousel, or inherit from a parent container. */
+    /* This example sets it to fill its parent (.card) up to 400px wide. */
+    max-width: 400px; 
+    margin-left: auto; /* Center it within the parent .card */
+    margin-right: auto;
+    
+    /* You must define a height if the image's height isn't defining it! */
+    /* If images are different aspect ratios, set a max-height: */
+    max-height: 500px;
+    
     position: relative;
-    overflow: hidden; /* Hides items that are not active */
+    overflow: hidden; 
+}
+
+/* 2. Size the images (using the new class 'carousel-img') */
+.carousel-img {
+    /* Crucial: Ensure the image never exceeds the container's width */
+    max-width: 100%;
+    /* Crucial: Ensure the image never exceeds the container's height and scales proportionally */
+    max-height: 100%;
+    
+    /* Ensure all images are treated as blocks and take up available width */
+    display: block; 
+    width: 100%;
+    height: auto;
+    
+    /* Optional: If images are different aspect ratios, use object-fit */
+    /* object-fit: cover; 
+    object-position: center; */
+}
+
+/* Make sure the carousel inner div also supports the sizing */
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Important for max-height to work */
 }
 
 /* 2. All carousel items are absolutely positioned and hidden by default */
