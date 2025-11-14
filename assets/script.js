@@ -6,6 +6,10 @@ const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 const buyDays = Math.floor((diffDays) / 7) + 1;
 document.getElementById("age").textContent = `for ${diffDays} days`;
 document.getElementById("fridays").textContent = `${buyDays}`;
+
+if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
+  document.getElementById("mobile-hidden").style.opacity = "1";
+}
     
 function copyMint() {
      const mint = document.getElementById("mint-id").innerText;
